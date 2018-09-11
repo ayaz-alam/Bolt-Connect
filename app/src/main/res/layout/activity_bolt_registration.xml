@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BoltRegistration">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerHorizontal="true"
+       android:layout_alignParentTop="true"
+        android:layout_margin="36dp"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:id="@+id/container"
+        android:padding="16dp"
+        android:background="@drawable/outline_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<android.support.design.widget.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_margin="4dp"
+    android:padding="2dp"
+    android:id="@+id/id_layout"
+    android:background="@drawable/outline"
+    android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bolt_id_edit_text"
+        android:textColor="@color/colorPrimaryText"
+        android:hint="Please enter your device ID"
+        android:inputType="text" />
+</android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_margin="4dp"
+        android:padding="2dp"
+        android:id="@+id/api_layout"
+        android:background="@drawable/outline"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bolt_api_edit_text"
+            android:textColor="@color/colorPrimaryText"
+            android:hint="Please enter your API key"
+            android:inputType="text" />
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_margin="4dp"
+        android:textStyle="bold"
+        android:background="@drawable/outline"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/submit_button"
+        android:text="Submit"
+        />
+    </LinearLayout>
+
+</RelativeLayout>

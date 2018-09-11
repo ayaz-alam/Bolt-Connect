@@ -1,0 +1,101 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:id="@+id/pin_layout"
+    android:layout_width="match_parent"
+    android:background="@drawable/outline"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:textSize="@dimen/list_text_size"
+        android:id="@+id/pin_0"
+        android:layout_alignParentStart="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status :[Unknown]"
+        android:textStyle="bold"
+        android:id="@+id/status"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/list_text_size"
+        android:layout_alignParentRight="true"
+        />
+
+
+    <Button
+        android:background="@drawable/outline"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/pin_0"
+        android:id="@+id/read_pin"
+        android:textSize="18sp"
+        android:padding="-8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Read"
+        />
+    <ToggleButton
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:id="@+id/toggle_button"
+        android:layout_below="@id/status"
+        android:textColor="@color/white"
+        android:layout_height="@dimen/button_width"
+        android:textStyle="bold"
+        android:background="@drawable/toggle_selector"
+        android:textOff="High"
+       android:visibility="gone"
+        android:textOn="Low"
+        />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_below="@+id/read_pin"
+    android:layout_marginTop="4dp"
+    android:id="@+id/seek_bar_layout"
+    android:visibility="gone"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Write PWM value to pin"
+        android:id="@+id/title"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cur. Value[0]"
+        android:layout_alignParentRight="true"
+        android:id="@+id/current_value"
+        />
+    <SeekBar
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/analog_seekbar"
+        android:layout_marginTop="8dp"
+        android:min="0"
+        android:max="245"
+        android:layout_toLeftOf="@id/write"
+        android:backgroundTint="@color/colorAccent"
+        android:progressTint="@color/colorPrimary"
+        />
+
+    <Button
+        android:id="@+id/write"
+        android:layout_below="@id/title"
+        android:background="@drawable/outline"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:text="Write" />
+</RelativeLayout>
+</RelativeLayout>

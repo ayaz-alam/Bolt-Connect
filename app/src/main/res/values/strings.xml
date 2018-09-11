@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Bolt Connect</string>
+    <string name="analog_pin">Analog Pin</string>
+    <string name="internet_error">No internet connection</string>
+</resources>

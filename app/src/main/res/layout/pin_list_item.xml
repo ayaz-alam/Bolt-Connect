@@ -1,0 +1,46 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:id="@+id/pin_layout"
+    android:layout_width="match_parent"
+    android:background="@drawable/outline"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/analog_pin"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:textSize="@dimen/list_text_size"
+        android:id="@+id/pin_0"
+        android:layout_alignParentStart="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value :[Unknown]"
+        android:textStyle="bold"
+        android:id="@+id/status"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/list_text_size"
+        android:layout_alignParentRight="true"
+        />
+    <Button
+        android:background="@drawable/outline"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/pin_0"
+        android:textStyle="bold"
+
+        android:id="@+id/read_pin"
+        android:textSize="18sp"
+        android:padding="-8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_width"
+        android:text="Read"
+        />
+</RelativeLayout>
