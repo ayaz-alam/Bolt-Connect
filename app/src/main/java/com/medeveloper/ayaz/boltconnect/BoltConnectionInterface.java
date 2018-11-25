@@ -328,7 +328,7 @@ public class BoltConnectionInterface extends AppCompatActivity implements View.O
 
             @Override
             public void cancelled() {
-                Toast.makeText(BoltConnectionInterface.this,"Can't Restart, some error occured",Toast.LENGTH_SHORT).show();
+                Toast.makeText(BoltConnectionInterface.this,"Can't Restart, some error occurred",Toast.LENGTH_SHORT).show();
                 connectionManger.setRestartListener(null);
             }
         });
