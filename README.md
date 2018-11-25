@@ -2,15 +2,15 @@
 # Screenshots
 <table>
     <tr>
-     <td><img src="./docs/_static/screenshots/ss_1.png"></td>
-     <td><img src="./docs/_static/screenshots/ss_2.png"></td>
-     <td><img src="./docs/_static/screenshots/ss_3.png"></td>
-     <td><img src="./docs/_static/screenshots/ss_4.png"></td>
+     <td><img src="/Screenshots/Screenshot_2018-11-25-11-33-39-677_com.medeveloper.ayaz.boltconnect.png"></td>
+     <td><img src="/Screenshots/Screenshot_2018-11-25-11-35-17-971_com.medeveloper.ayaz.boltconnect.png"></td>
+     <td><img src="/Screenshots/Screenshot_2018-11-25-11-35-27-854_com.medeveloper.ayaz.boltconnect.png"></td>
+     <td><img src="/Screenshots/Screenshot_2018-11-25-11-35-34-082_com.medeveloper.ayaz.boltconnect.png"></td>
      <tr> 
-      <td><img src="./docs/_static/screenshots/ss_5.png"></td>
-      <td><img src="./docs/_static/screenshots/ss_6.png"></td>
-      <td><img src="./docs/_static/screenshots/ss_7.png"></td>
-      <td><img src="./docs/_static/screenshots/ss_8.png"></td>
+      <td><img src="/Screenshots/Screenshot_2018-11-25-11-35-40-874_com.medeveloper.ayaz.boltconnect.png"></td>
+      <td><img src="/Screenshots/Screenshot_2018-11-25-11-35-48-401_com.medeveloper.ayaz.boltconnect.png"></td>
+      <td><img src="/Screenshots/Screenshot_2018-11-25-11-35-52-164_com.medeveloper.ayaz.boltconnect.png"></td>
+      
     </tr>
   </table>
 # Overview
