@@ -56,11 +56,6 @@ public class BoltConnectionInterface extends AppCompatActivity implements View.O
             showNoConnectionView(false, "null");
             showProgressBar(true);
         }
-
-        Intent intent = new Intent(this,CheckInternetService.class);
-        intent.putExtra("API",APIKey);
-        intent.putExtra("ID", BoltID);
-        startService(intent);
     }
     public boolean isOnline() {
         ConnectivityManager cm =
