@@ -2,4 +2,22 @@
     <string name="app_name">Bolt Connect</string>
     <string name="analog_pin">Analog Pin</string>
     <string name="internet_error">No internet connection</string>
+    <string name="no_internet">No internet connection  Please check your internet connection</string>
+    <string name="bolt_offline">Bolt is offline</string>
+    <string name="bolt_network_error">Network error</string>
+    <string name="invalid_api_key">Invalid API Key</string>
+    <string name="device_does_not_exists">Device does not exists</string>
+    <string name="time_out">Timeout</string>
+    <string name="offline">Offline</string>
+    <string name="online">Online :)</string>
+    <string name="gpio">GPIO Pin</string>
+    <string name="success">Successfully written</string>
+    <string name="low">Low</string>
+    <string name="high">High</string>
+    <string name="status">Status:[</string>
+    <string name="close_brace">]</string>
+    <string name="failed">Failed</string>
+    <string name="restart">Restarted</string>
+    <string name="cant_restart">Can\'t Restart, some error occurred</string>
+    <string name="not_implemented">Not implemented yet</string>
 </resources>
