@@ -5,13 +5,12 @@
      <td><img src="/Screenshots/Screenshot_2018-11-25-11-33-39-677_com.medeveloper.ayaz.boltconnect.png"></td>
      <td><img src="/Screenshots/Screenshot_2018-11-25-11-35-17-971_com.medeveloper.ayaz.boltconnect.png"></td>
      <td><img src="/Screenshots/Screenshot_2018-11-25-11-35-27-854_com.medeveloper.ayaz.boltconnect.png"></td>
-     <td><img src="/Screenshots/Screenshot_2018-11-25-11-35-34-082_com.medeveloper.ayaz.boltconnect.png"></td>
+    </tr>
      <tr> 
       <td><img src="/Screenshots/Screenshot_2018-11-25-11-35-40-874_com.medeveloper.ayaz.boltconnect.png"></td>
       <td><img src="/Screenshots/Screenshot_2018-11-25-11-35-48-401_com.medeveloper.ayaz.boltconnect.png"></td>
       <td><img src="/Screenshots/Screenshot_2018-11-25-11-35-52-164_com.medeveloper.ayaz.boltconnect.png"></td>
-      
-    </tr>
+      </tr>
   </table>
 # Overview
 It is always great to control a microcontroller from an android app .
