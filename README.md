@@ -34,6 +34,8 @@ Before you begin, you should have already downloaded the Android Studio SDK and 
 
 8. If the app was built successfully, you can test it by running it on either a real device or an emulated one by going to *Run > Run 'app'* or pressing the Run icon in the toolbar.
 
-
+## How to use
+First Install the App
+Once you open the app you will get a screen like this
    
    
