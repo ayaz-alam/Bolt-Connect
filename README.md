@@ -51,6 +51,7 @@ Before you begin, you should have already downloaded the Android Studio SDK and 
 ## How to use
 First Install the App
 Once you open the app you will get a screen like this
-<img width="200px" height="300px" src="/Screenshot_2018-11-25-11-27-26-754_com.medeveloper.ayaz.boltconnect.png"/>
+<br>
+<img width="200px" height="300px" align="left" src="/Screenshot_2018-11-25-11-27-26-754_com.medeveloper.ayaz.boltconnect.png"/>
    
    
