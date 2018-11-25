@@ -53,7 +53,7 @@ Before you begin, you should have already downloaded the Android Studio SDK and 
 First Install the App
 Once you open the app you will get a screen like this
 <br>
-<img width="200px" height="300px" align="center" src="/Screenshot_2018-11-25-11-27-26-754_com.medeveloper.ayaz.boltconnect.png"/><br>
+<img align="center" src="/Screenshot_2018-11-25-11-27-26-754_com.medeveloper.ayaz.boltconnect.png"/><br>
 <p>Just type your Bolt Device Id and API key in the box and Hit submit.</p>
    
    
