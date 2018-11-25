@@ -22,11 +22,6 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".BoltRegistration" />
         <activity android:name=".BoltConnectionInterface" />
-
-        <service
-            android:name=".CheckInternetService"
-            android:enabled="true"
-            android:exported="true"></service>
     </application>
 
 </manifest>

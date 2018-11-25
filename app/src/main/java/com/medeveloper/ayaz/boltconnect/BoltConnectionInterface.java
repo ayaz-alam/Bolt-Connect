@@ -56,11 +56,6 @@ public class BoltConnectionInterface extends AppCompatActivity implements View.O
             showNoConnectionView(false, "null");
             showProgressBar(true);
         }
-
-        Intent intent = new Intent(this,CheckInternetService.class);
-        intent.putExtra("API",APIKey);
-        intent.putExtra("ID", BoltID);
-        startService(intent);
     }
     public boolean isOnline() {
         ConnectivityManager cm =
@@ -72,7 +67,7 @@ public class BoltConnectionInterface extends AppCompatActivity implements View.O
         else
         {
             showProgressBar(false);
-            showNoConnectionView(true,"No internet connection\n Please check your internet connection");
+            showNoConnectionView(true,getString(R.string.no_internet));
         }
         return false;
     }
@@ -114,23 +109,23 @@ public class BoltConnectionInterface extends AppCompatActivity implements View.O
                 else if(status==OFFLINE)
                 {
                     dontProceed();
-                    showNoConnectionView(true,"Bolt is offline");
+                    showNoConnectionView(true,getString(R.string.bolt_offline));
                     showProgressBar(false);
                 }
                 else if(status==CONNECTION_TIMEOUT) {
                     connectionTimeOut();
                     showProgressBar(false);
-                    showNoConnectionView(true,"Network error");
+                    showNoConnectionView(true,getString(R.string.bolt_network_error));
                 }
                 else if(status==INVALID_API_KEY) {
                     connectionTimeOut();
                     showProgressBar(false);
-                    showNoConnectionView(true,"Invalid API Key");
+                    showNoConnectionView(true,getString(R.string.invalid_api_key));
                 }
                 else if(status==DEVICE_NOT_FOUND) {
                     connectionTimeOut();
                     showProgressBar(false);
-                    showNoConnectionView(true,"Device does not exists");
+                    showNoConnectionView(true,getString(R.string.device_does_not_exists));
                 }
             }
         });
@@ -139,26 +134,26 @@ public class BoltConnectionInterface extends AppCompatActivity implements View.O
 
     private void connectionTimeOut() {
         Log.d("BoltStatus","TimeOut");
-        Toast.makeText(this,"Timeout",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.time_out,Toast.LENGTH_SHORT).show();
         PinLayoutContainer.setVisibility(View.GONE);
     }
 
     private void dontProceed() {
         Log.d("BoltStatus","Offline");
-        Toast.makeText(this,"Offline",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.offline,Toast.LENGTH_SHORT).show();
         PinLayoutContainer.setVisibility(View.GONE);
     }
 
     private void proceed() {
         showNoConnectionView(false, "");
-        Toast.makeText(this,"Online :)",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.online,Toast.LENGTH_SHORT).show();
         PinLayoutContainer.setVisibility(View.VISIBLE);
         for(int i= 0;i<5;i++)
         {
             View view = LayoutInflater.from(this).inflate(R.layout.analog_pin_list,null);
             pinList.add(view);
             PinLayoutContainer.addView(view);
-            ((TextView)view.findViewById(R.id.pin_0)).setText("GPIO Pin "+i);
+            ((TextView)view.findViewById(R.id.pin_0)).setText(getString(R.string.gpio)+i);
 
         }
         preparePinListeners();
@@ -215,12 +210,12 @@ public class BoltConnectionInterface extends AppCompatActivity implements View.O
                 @Override
                 public void getPinStatus(int status,int pin) {
 
-                        Toast.makeText(BoltConnectionInterface.this,"Successfully written",Toast.LENGTH_SHORT).show();
-                        String Status = "Low";
+                        Toast.makeText(BoltConnectionInterface.this, R.string.success,Toast.LENGTH_SHORT).show();
+                        String Status = getString(R.string.low);
                         if (status == 1)
-                            Status = "High";
-                        ((TextView) pinList.get(pin).findViewById(R.id.status)).setText("Status:[ " + Status + " ]");
-                        ((ToggleButton) pinList.get(pin).findViewById(R.id.toggle_button)).setChecked(!Status.equals("High"));
+                            Status = getString(R.string.high);
+                        ((TextView) pinList.get(pin).findViewById(R.id.status)).setText(getString(R.string.status) + Status + getString(R.string.close_brace));
+                        ((ToggleButton) pinList.get(pin).findViewById(R.id.toggle_button)).setChecked(!Status.equals(getString(R.string.high)));
                         ((ToggleButton) pinList.get(pin).findViewById(R.id.toggle_button)).setVisibility(View.VISIBLE);
                         (pinList.get(pin).findViewById(R.id.seek_bar_layout)).setVisibility(View.VISIBLE);
                 }
@@ -233,15 +228,15 @@ public class BoltConnectionInterface extends AppCompatActivity implements View.O
                 @Override
                 public void getPinStatus(int status, int pin,boolean isPWM) {
                     if(status!=FAILED_TO_WRITE) {
-                        Toast.makeText(BoltConnectionInterface.this,"Successfully written",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BoltConnectionInterface.this,getString(R.string.success),Toast.LENGTH_SHORT).show();
                         if(!isPWM) {
-                            String Status = "High";
+                            String Status = getString(R.string.high);
                             if (((ToggleButton) v).isChecked())
-                                Status = "Low";
+                                Status = getString(R.string.low);
                             ((TextView) pinList.get(pin).findViewById(R.id.status)).setText("Status:[ " + Status + " ]");
                         }
                     }
-                    else Toast.makeText(BoltConnectionInterface.this,"Failed",Toast.LENGTH_SHORT).show();
+                    else Toast.makeText(BoltConnectionInterface.this, R.string.failed,Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -256,7 +251,7 @@ public class BoltConnectionInterface extends AppCompatActivity implements View.O
                 @Override
                 public void getPinStatus(int status, int pin,boolean isPWM) {
                     if(status!=FAILED_TO_WRITE) {
-                        Toast.makeText(BoltConnectionInterface.this,"Successfully written",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BoltConnectionInterface.this,getString(R.string.success),Toast.LENGTH_SHORT).show();
                         if(!isPWM) {
                             String Status = "High";
                             if (((ToggleButton) v).isChecked())
@@ -318,7 +313,7 @@ public class BoltConnectionInterface extends AppCompatActivity implements View.O
         {
             case R.id.logout: logout();break;
             case R.id.restart: restart();break;
-            case R.id.about: Toast.makeText(this,"Not implemented yet",Toast.LENGTH_SHORT).show();break;
+            case R.id.about: Toast.makeText(this, R.string.not_implemented,Toast.LENGTH_SHORT).show();break;
         }
         return true;
     }
@@ -327,13 +322,13 @@ public class BoltConnectionInterface extends AppCompatActivity implements View.O
         connectionManger.setRestartListener(new ConnectionManger.RestartBolt() {
             @Override
             public void restarted() {
-                Toast.makeText(BoltConnectionInterface.this,"Restarted",Toast.LENGTH_SHORT).show();
+                Toast.makeText(BoltConnectionInterface.this, R.string.restart,Toast.LENGTH_SHORT).show();
                 connectionManger.setRestartListener(null);
             }
 
             @Override
             public void cancelled() {
-                Toast.makeText(BoltConnectionInterface.this,"Can't Restart, some error occured",Toast.LENGTH_SHORT).show();
+                Toast.makeText(BoltConnectionInterface.this, R.string.cant_restart,Toast.LENGTH_SHORT).show();
                 connectionManger.setRestartListener(null);
             }
         });
