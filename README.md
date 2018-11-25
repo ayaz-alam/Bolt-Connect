@@ -22,6 +22,12 @@ Before you begin, you should have already downloaded the Android Studio SDK and 
 2. Install the NDK in Android Studio.
 
 3. Open Android Studio, you will see a **Welcome to Android** window. Under Quick Start, select *Import Project (Eclipse ADT, Gradle, etc.)*
+4. Navigate to the directory where you saved the Bolt-connect-android project, select the root folder of the project (the folder named "Bolt-connect-android"), and hit OK. Android Studio should now begin building the project with Gradle.
+
+5. Once this process is complete and Android Studio opens, check the Console for any build errors.
+
+    - *Note:* If you receive a Gradle sync error titled, "failed to find ...", you should click on the link below the error message (if available) that says *Install missing platform(s) and sync project* and allow Android studio to fetch you what is missing.
+
 
 
 
