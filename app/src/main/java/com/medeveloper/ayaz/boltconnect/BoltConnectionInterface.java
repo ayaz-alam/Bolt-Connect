@@ -233,7 +233,7 @@ public class BoltConnectionInterface extends AppCompatActivity implements View.O
                             String Status = getString(R.string.high);
                             if (((ToggleButton) v).isChecked())
                                 Status = getString(R.string.low);
-                            ((TextView) pinList.get(pin).findViewById(R.id.status)).setText("Status:[ " + Status + " ]");
+                            ((TextView) pinList.get(pin).findViewById(R.id.status)).setText(" Status:[ " + Status + " ]");
                         }
                     }
                     else Toast.makeText(BoltConnectionInterface.this, R.string.failed,Toast.LENGTH_SHORT).show();
